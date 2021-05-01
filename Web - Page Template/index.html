@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Monitor ESP32</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' charset=utf-16>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+    <style>
+        html {
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            margin: 0px auto;
+            text-align: center;
+            color: #444444;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            margin: 50px auto 30px;
+        }
+
+        .box {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .text {
+            font-weight: 600;
+            font-size: 19px;
+            width: 200px;
+        }
+
+        .reading {
+            font-weight: 300;
+            font-size: 50px;
+            padding-right: 25px;
+        }
+
+        .temp .reading {
+            color: #ff5242;
+        }
+
+        .humedad .reading {
+            color: #0086cd;
+        }
+
+        .BPM .reading {
+            color: #00c7ff;
+        }
+
+        .SpO2 .reading {
+            color: #00c7ff;
+        }
+
+        .temperatura .reading {
+            color: #00b6eb;
+        }
+
+        .superscript {
+            font-size: 17px;
+            font-weight: 600;
+            position: absolute;
+            top: 10px;
+        }
+
+        .data {
+            padding: 10px;
+        }
+
+        .container {
+            display: table;
+            margin: 0 auto;
+        }
+
+        .icon {
+            width: 65px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MONITOR DEL PACIENTE</h1>
+    <div class='container'>
+        <div class='data temperatura'>
+            <div class='box icon'>
+                <img src="https://assets.dryicons.com/uploads/icon/svg/9588/0a975bb8-ef48-40be-a4de-7a8e2b0f414e.svg">
+            </div>
+            <div class='box text'>Temperatura</div>
+            <div class='box reading'>
+                (int)temp;
+                <span class='superscript'>&deg;C</span>
+            </div>
+        </div>
+        <div class='data humedad'>
+            <div class='box icon'>
+                <img src="https://assets.dryicons.com/uploads/icon/svg/9579/fd1261bf-771d-49e7-993f-d771a81696d7.svg">
+            </div>
+            <div class='box text'>Húmedad</div>
+            <div class='box reading'>
+                (int)humedad;
+                <span class='superscript'>%</span>
+            </div>
+        </div>
+        <div class='data BPM'>
+            <div class='box icon'>
+                <img src="https://assets.dryicons.com/uploads/icon/svg/12146/f78ab3ce-30d4-45af-89a2-6d5b5c154724.svg">
+            </div>
+            <div class='box text'>Ritmo cardíaco</div>
+            <div class='box reading'>
+                (int)BPM;
+                <span class='superscript'>BPM</span>
+            </div>
+        </div>
+        <div class='data SpO2'>
+            <div class='box icon'>
+                <img src="https://assets.dryicons.com/uploads/icon/svg/12148/c8aa521e-7fb4-4f86-9bb4-3cd1268d8849.svg">
+            </div>
+            <div class='box text'>Oxígenación Sanguínea</div>
+            <div class='box reading'>
+                (int)SpO2;
+                <span class='superscript'>%</span>
+            </div>
+        </div>
+        <div class='data temp'>
+            <div class='box icon'>
+                <img src="https://assets.dryicons.com/uploads/icon/svg/9589/24490b47-fdbb-4043-a638-23b7dff618bf.svg">
+            </div>
+            <div class='box text'>Temperatura Corporal</div>
+            <div class='box reading'>
+                (int)temperatura;
+                <span class='superscript'>&deg;C</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
